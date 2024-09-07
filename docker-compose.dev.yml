@@ -1,5 +1,5 @@
 services:
-  api:
+  etl:
     container_name: etl_aviationstack
     build:
       context: .
