@@ -40,4 +40,4 @@ USER app
 COPY . .
 
 # run entrypoint.sh
-ENTRYPOINT ["/app/entrypoint.dev.sh"]
+ENTRYPOINT ["/app/entrypoint.sh"]
