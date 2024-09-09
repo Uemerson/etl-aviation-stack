@@ -1,0 +1,65 @@
+name: python-linter
+
+on: [push]
+
+jobs:
+
+  check-files:
+    runs-on: ubuntu-latest
+    outputs:
+      my-key: ${{ steps.my-key.outputs.defined }}
+    steps:
+        - id: count-python-files
+          run: echo "::set-output name=total::git ls-files '*.py' | wc -l"
+
+  build:
+    runs-on: ubuntu-latest
+    if: needs.check-files.count-python-files.outputs.total > 0    
+    strategy:
+      matrix:
+        python-version: ["3.12"]
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v3
+      with:
+        python-version: ${{ matrix.python-version }}
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install pylint
+        pip install flake8
+        pip install black
+        pip install isort
+        pip install mypy
+        pip install pycodestyle
+        pip install bandit
+        pip install safety
+        pip install vulture
+    - name: Analysing the code with pylint
+      run: |
+        pylint .
+    - name: Analysing the code with flake8
+      run: |
+        flake8 $(git ls-files '*.py')
+    - name: Analysing the code with black
+      run: |
+        black $(git ls-files '*.py')
+    - name: Analysing the code with isort
+      run: |
+        isort $(git ls-files '*.py')
+    - name: Analysing the code with mypy
+      run: |
+        mypy $(git ls-files '*.py')
+    - name: Analysing the code with pycodestyle
+      run: |
+        pycodestyle $(git ls-files '*.py')
+    - name: Analysing the code with bandit
+      run: |
+        bandit $(git ls-files '*.py')
+    - name: Analysing the code with safety
+      run: |
+        safety $(git ls-files '*.py')
+    - name: Analysing the code with vulture
+      run: |
+        vulture $(git ls-files '*.py')
