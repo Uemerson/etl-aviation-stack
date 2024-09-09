@@ -3,12 +3,12 @@ services:
     container_name: etl_aviationstack
     build:
       context: .
-      dockerfile: Dockerfile.dev
+      dockerfile: Dockerfile
     command: python src/main.py
     volumes:
       - .:/app/
     env_file:
-      - ./.env.dev
+      - ./.env
     networks:
       - local_network
     depends_on:
