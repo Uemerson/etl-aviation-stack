@@ -39,7 +39,7 @@ jobs:
           pip install vulture
       - name: Analysing the code with pylint
         run: |
-          pylint .
+          pylint $(git ls-files '*.py')
       - name: Analysing the code with flake8
         run: |
           flake8 $(git ls-files '*.py')
