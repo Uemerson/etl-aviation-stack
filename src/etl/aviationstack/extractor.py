@@ -1,6 +1,6 @@
 """Module providing an extractor function for the AviationStack API."""
 
-from src.api_services import aviationstack
+from src.api_services.aviationstack import request
 
 
 def extract():
@@ -16,7 +16,7 @@ def extract():
         "diverted",
     ]:
         for offset in range(0, 2):
-            request_data = aviationstack.request(
+            request_data = request(
                 offset=offset, limit=100, flight_status=flight_status
             )
             if request_data is not None:
