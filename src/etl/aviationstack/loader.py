@@ -28,7 +28,7 @@ def load(conn, transformed_data):
                 %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s,
                 %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s,
                 %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
-    """
+        """
     )
     try:
         conn.autocommit = False
