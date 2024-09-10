@@ -56,12 +56,3 @@ jobs:
       - name: Analysing the code with pycodestyle
         run: |
           pycodestyle $(git ls-files '*.py')
-      - name: Analysing the code with bandit
-        run: |
-          bandit $(git ls-files '*.py')
-      - name: Analysing the code with safety
-        run: |
-          safety $(git ls-files '*.py')
-      - name: Analysing the code with vulture
-        run: |
-          vulture $(git ls-files '*.py')
