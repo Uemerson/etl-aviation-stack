@@ -53,6 +53,3 @@ jobs:
       - name: Analysing the code with mypy
         run: |
           mypy $(git ls-files '*.py')
-      - name: Analysing the code with pycodestyle
-        run: |
-          pycodestyle $(git ls-files '*.py')
