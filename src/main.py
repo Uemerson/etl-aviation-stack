@@ -19,6 +19,9 @@ def main():
     if conn is not None:
         migration.migrate(conn)
         run_aviationstack_etl_flow(conn)
+        print("ETL process completed successfully.")
+    else:
+        print("Unable to connect to the PostgreSQL server.")
 
 
 if __name__ == "__main__":
