@@ -43,3 +43,19 @@ ou se tiver usando um sistema UNIX basta rodar o bash script com:
 ```
 $ bash up.etl.v2.sh
 ```
+
+# Como rodar a análise?
+
+Após rodar o ETL, pode ser necessário subir o container do banco de dados, onde os dados foram salvos, com o comando:
+
+```
+$ docker compose -f docker-compose.yml --env-file .env up -d postgres --build --remove-orphans
+```
+
+Crie um ambiente virtual seguindo as [instruções](https://docs.python.org/3/library/venv.html) e ative-o. Em seguida, instale as dependências do projeto com o comando:
+
+```
+$ pip install -r requirements.txt
+```
+
+Ao abrir o [notebook de análise](./notebooks/analysis_etl_aviationstack.ipynb), selecione o kernel correspondente ao caminho do ambiente virtual criado. E então rode todas as células do jupyter notebook.
