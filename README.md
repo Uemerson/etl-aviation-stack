@@ -14,3 +14,7 @@ Esse repositório tem como objetivo realizar um ETL simples da [AviationStack AP
 - coverage: Ferramenta para medir a cobertura dos testes, ajudando a identificar partes do código não testadas.
 - folium: Biblioteca para visualização de dados geoespaciais em mapas.
 - matplotlib: Biblioteca para criação de gráficos e visualizações estáticas em Python
+
+# Pré-requisitos
+
+É necessário ter instalado o docker junto com o docker compose na máquina. Para instalar o docker compose siga as [instruções.](https://docs.docker.com/compose/install/)
