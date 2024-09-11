@@ -9,7 +9,7 @@ Esse repositório tem como objetivo realizar um ETL simples da [AviationStack AP
 - PostgreSQL: Sistema de gerenciamento de banco de dados relacional utilizado para armazenar e consultar dados.
 - psycopg2: Biblioteca para conectar e interagir com o banco de dados PostgreSQL a partir do Python.
 - Pandas: Biblioteca para manipulação e análise de dados.
-- GitHub Actions: Configurado para executar a lintagem do código automaticamente sempre que houver um push para o repositório.
+- GitHub Actions: Configurado para executar a lintagem do código automaticamente e rodar os testes sempre que houver um push para o repositório.
 - unittest: Framework para realização de testes unitários, assegurando a funcionalidade do código.
 - coverage: Ferramenta para medir a cobertura dos testes, ajudando a identificar partes do código não testadas.
 - folium: Biblioteca para visualização de dados geoespaciais em mapas.
@@ -60,6 +60,20 @@ $ pip install -r requirements.txt
 
 Ao abrir o [notebook de análise](./notebooks/analysis_etl_aviationstack.ipynb), selecione o kernel correspondente ao caminho do ambiente virtual criado. E então rode todas as células do jupyter notebook.
 
+# Como rodar os testes?
+
+Para rodar todos os testes contidos na pasta tests, use o comando:
+
+```
+$ python -m unittest discover -s tests -p "test_*.py"
+```
+
+Para rodar os testes e verificar a cobertura de código, use o comando:
+
+```
+$ coverage run -m unittest discover -s tests -p "test_*.py"
+```
+
 # Observação
 
 - A análise presente no [notebook de análise](./notebooks/analysis_etl_aviationstack.ipynb) refere-se à execução do ETL realizada em 09/09/2024.
@@ -70,5 +84,9 @@ Como por exemplo: pylint, flake8, black, isort, mypy.
 - O comando `docker compose` funciona apenas a partir da versão 2 do Docker CLI. Se você estiver usando a versão 1, é necessário substituir por `docker-compose`.
 
 - Cobertura de código de 100% usando o Coverage report
+
+- Na própria [documentação da biblioteca psycopg2](https://www.psycopg.org/docs/extras.html), é recomendado o uso da função `execute_batch` para lidar com um grande volume de dados.
+
+- Não há comentários no código, pois sua implementação é clara e autoexplicativa.
 
 ![Coverage report](image.png)
