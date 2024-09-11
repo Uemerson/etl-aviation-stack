@@ -18,3 +18,28 @@ Esse repositório tem como objetivo realizar um ETL simples da [AviationStack AP
 # Pré-requisitos
 
 É necessário ter instalado o docker junto com o docker compose na máquina. Para instalar o docker compose siga as [instruções.](https://docs.docker.com/compose/install/)
+
+# Como rodar o ETL?
+
+Primeiro copie o arquivo .env.example e cole com o nome .env e preencha as variáveis de ambiente, como por exemplo: 
+
+```
+AVIATIONSTACK_ACCESS_KEY=my_aviationstack_access_key
+POSTGRES_USER=postgres
+POSTGRES_PASSWORD=postgres
+POSTGRES_HOST=postgres
+POSTGRES_DB=elt_aviationstack
+POSTGRES_PORT=5432
+```
+
+depois rode o comando:
+
+```
+$ docker compose -f docker-compose.yml --env-file .env up -d --build
+```
+
+ou se tiver usando um sistema UNIX basta rodar o bash script com:
+
+```
+$ bash up.etl.v2.sh
+```
