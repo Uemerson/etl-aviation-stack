@@ -46,7 +46,7 @@ ou se tiver usando um sistema UNIX basta rodar o bash script com:
 $ bash up.etl.v2.sh
 ```
 
-`Observação: o processo de ETL pode levar alguns segundos para ser concluído. Como não foi implementado um feedback visual, pode ser necessário aguardar um pouco para verificar se a execução foi bem-sucedida.`
+Observação: o processo de ETL pode levar alguns minutos para ser concluído. Como não há um feedback visual implementado, pode ser necessário aguardar um pouco para verificar se os registros foram inseridos no banco de dados. Ao executar o script up.etl.v2.sh no bash, um sistema de log está disponível, o que pode ser mais eficiente para monitorar a conclusão da execução do ETL.`
 
 # Como rodar a análise?
 
