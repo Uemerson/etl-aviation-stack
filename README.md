@@ -68,3 +68,7 @@ Ao abrir o [notebook de análise](./notebooks/analysis_etl_aviationstack.ipynb),
 Como por exemplo: pylint, flake8, black, isort, mypy.
 
 - O comando `docker compose` funciona apenas a partir da versão 2 do Docker CLI. Se você estiver usando a versão 1, é necessário substituir por `docker-compose`.
+
+- Cobertura de código de 100% usando o Coverage report
+
+![Coverage report](image.png)
