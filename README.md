@@ -46,6 +46,8 @@ ou se tiver usando um sistema UNIX basta rodar o bash script com:
 $ bash up.etl.v2.sh
 ```
 
+`Observação: o processo de ETL pode levar alguns segundos para ser concluído. Como não foi implementado um feedback visual, pode ser necessário aguardar um pouco para verificar se a execução foi bem-sucedida.`
+
 # Como rodar a análise?
 
 Após rodar o ETL, pode ser necessário subir o container do banco de dados, onde os dados foram salvos, com o comando:
