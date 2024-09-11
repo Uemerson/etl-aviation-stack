@@ -59,3 +59,12 @@ $ pip install -r requirements.txt
 ```
 
 Ao abrir o [notebook de análise](./notebooks/analysis_etl_aviationstack.ipynb), selecione o kernel correspondente ao caminho do ambiente virtual criado. E então rode todas as células do jupyter notebook.
+
+# Observação
+
+- A análise presente no [notebook de análise](./notebooks/analysis_etl_aviationstack.ipynb) refere-se à execução do ETL realizada em 09/09/2024.
+
+- Algumas bibliotecas de lint foram utilizadas para assegurar que o código segue o padrão [PEP8.](https://peps.python.org/pep-0008/)
+Como por exemplo: pylint, flake8, black, isort, mypy.
+
+- O comando `docker compose` funciona apenas a partir da versão 2 do Docker CLI. Se você estiver usando a versão 1, é necessário substituir por `docker-compose`.
