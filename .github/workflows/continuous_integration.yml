@@ -46,6 +46,7 @@ jobs:
           mypy $(git ls-files '*.py')
     
   test:
+    runs-on: ubuntu-latest
     needs: lint
     strategy:
       matrix:
