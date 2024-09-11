@@ -19,6 +19,8 @@ Esse repositório tem como objetivo realizar um ETL simples da [AviationStack AP
 
 É necessário ter instalado o docker junto com o docker compose na máquina. Para instalar o docker compose siga as [instruções.](https://docs.docker.com/compose/install/)
 
+Também é necessário uma chave de API que você deverá obter registrando-se no serviço [AviationStack](https://aviationstack.com/documentation).
+
 # Como rodar o ETL?
 
 Primeiro copie o arquivo .env.example e cole com o nome .env e preencha as variáveis de ambiente, como por exemplo: 
