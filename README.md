@@ -26,7 +26,7 @@ Também é necessário uma chave de API que você deverá obter registrando-se n
 Primeiro copie o arquivo .env.example e cole com o nome .env e preencha as variáveis de ambiente, como por exemplo: 
 
 ```
-AVIATIONSTACK_ACCESS_KEY=my_aviationstack_access_key
+AVIATIONSTACK_ACCESS_KEY=sua_chave_de_api_do_aviationstack
 POSTGRES_USER=postgres
 POSTGRES_PASSWORD=postgres
 POSTGRES_HOST=postgres
